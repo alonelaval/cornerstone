@@ -1,0 +1,7002 @@
+{
+	"info": {
+		"_postman_id": "b07ce219-4592-40c2-adcc-3489689275be",
+		"name": "ycz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "登录注册",
+					"item": [
+						{
+							"name": "api-接口权限验证",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxODYxNjIwNTY5OCIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE1MzIyNjYzNDEsImV4cCI6MTUzMjM1Mjc0MX0.mpqsAoEyYygph9RULAAoNJYY_yNpodcbx1I10hvfrf0"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api-验证",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNTMyMjY2MDQ1LCJleHAiOjE1MzIzNTI0NDV9.vQ30eNWqT8x1Ua3cpF3YdypInrI_tx-3FJu6f4gejH4"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/hello",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hello"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "找回密码",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "loginName",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "newPassword",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "598459",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/findPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"findPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "C端用户注册 ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone",
+											"value": "18516205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "454570",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/userRegister",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"userRegister"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "机构注册",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orgName",
+													"value": "优成长",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "\b123",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "827620",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/user/orgRegister",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"orgRegister"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1593",
+											"name": "Content-Length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jul 2018 15:23:27 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (CST)",
+											"httpOnly": true,
+											"domain": "localhost",
+											"path": "/",
+											"secure": false,
+											"value": "C0AD21650D84447BB77D48D4214A759E",
+											"key": "JSESSIONID"
+										}
+									],
+									"body": "{\n\t\"accountNonExpired\":true,\n\t\"accountNonLocked\":true,\n\t\"authorities\":[{\n\t\t\"authority\":\"ROLE_ORG\"\n\t}],\n\t\"credentialsNonExpired\":true,\n\t\"enabled\":true,\n\t\"loginType\":\"ORG_ROLE\",\n\t\"org\":{\n\t\t\"createTime\":1532186606701,\n\t\t\"id\":\"vXFV0aL0JZM=\",\n\t\t\"orgId\":7,\n\t\t\"orgName\":\"优成长\",\n\t\t\"state\":\"ENABLED\",\n\t\t\"userId\":47,\n\t\t\"userPhone\":\"18616205698\"\n\t},\n\t\"orgEmployee\":{\n\t\t\"createTime\":1532186606722,\n\t\t\"employeId\":7,\n\t\t\"id\":\"vXFV0aL0JZM=\",\n\t\t\"orgId\":7,\n\t\t\"orgName\":\"优成长\",\n\t\t\"phone\":\"18616205698\",\n\t\t\"state\":\"ENABLED\",\n\t\t\"userId\":47\n\t},\n\t\"password\":\"$2a$10$pAoKs2Ll6MJugc/82/f4M.RkVfDyEtWw8Kv6R84yxeoeyM51tEM4a\",\n\t\"user\":{\n\t\t\"createTime\":1532186606701,\n\t\t\"id\":\"JxtExqHIxis=\",\n\t\t\"loginName\":\"18616205698\",\n\t\t\"loginPassword\":\"$2a$10$pAoKs2Ll6MJugc/82/f4M.RkVfDyEtWw8Kv6R84yxeoeyM51tEM4a\",\n\t\t\"permissions\":[\n\t\t\t{\n\t\t\t\t\"createTime\":1532186607064,\n\t\t\t\t\"id\":\"cFgLypgR0oQ=\",\n\t\t\t\t\"isShow\":\"SHOW\",\n\t\t\t\t\"lastUpdateTime\":\"2018-07-20 22:30:25\",\n\t\t\t\t\"name\":\"org\",\n\t\t\t\t\"opId\":4,\n\t\t\t\t\"orgId\":7,\n\t\t\t\t\"orgName\":\"优成长\",\n\t\t\t\t\"permissionId\":2,\n\t\t\t\t\"rank\":1,\n\t\t\t\t\"state\":\"ENABLED\",\n\t\t\t\t\"type\":\"MENU\",\n\t\t\t\t\"value\":\"/api/org\"\n\t\t\t}\n\t\t],\n\t\t\"phone\":\"18616205698\",\n\t\t\"roles\":[\n\t\t\t{\n\t\t\t\t\"addEmployId\":7,\n\t\t\t\t\"createTime\":1532186607029,\n\t\t\t\t\"id\":\"qIwo4C/GSts=\",\n\t\t\t\t\"lastUpdateTime\":\"2018-07-21 23:19:02\",\n\t\t\t\t\"orgId\":7,\n\t\t\t\t\"orgName\":\"优成长\",\n\t\t\t\t\"roleCode\":\"ROLE_ORG\",\n\t\t\t\t\"roleDesc\":\"org\",\n\t\t\t\t\"roleId\":2,\n\t\t\t\t\"roleName\":\"org\",\n\t\t\t\t\"state\":\"ENABLED\"\n\t\t\t}\n\t\t],\n\t\t\"servicePermissions\":[],\n\t\t\"state\":\"ENABLED\",\n\t\t\"uriPermissions\":[\n\t\t\t{\"$ref\":\"$.user.permissions[0]\"}\n\t\t],\n\t\t\"userId\":47\n\t},\n\t\"username\":\"18616205698\"\n}"
+								},
+								{
+									"name": "机构注册",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orgName",
+													"value": "优成长",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "\b123",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "{\n    \"resultCode\": 11,\n    \"message\": \"手机验证码错误或已过期！\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/user/orgRegister",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"orgRegister"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jul 2018 15:16:10 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (CST)",
+											"httpOnly": true,
+											"domain": "localhost",
+											"path": "/",
+											"secure": false,
+											"value": "C0AD21650D84447BB77D48D4214A759E",
+											"key": "JSESSIONID"
+										}
+									],
+									"body": "{\"resultCode\":11,\"message\":\"手机验证码错误或已过期！\"}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "\b收货地址",
+					"item": [
+						{
+							"name": "\b添加",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "province",
+											"value": "湖北",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "咸宁",
+											"type": "text"
+										},
+										{
+											"key": "county",
+											"value": "通山县",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "洪港镇xxx",
+											"type": "text"
+										},
+										{
+											"key": "receiveUserName",
+											"value": "hua",
+											"type": "text"
+										},
+										{
+											"key": "receiveUserPhone",
+											"value": "121212121212",
+											"type": "text"
+										},
+										{
+											"key": "tags[0].tagName",
+											"value": "家",
+											"type": "text"
+										},
+										{
+											"key": "tags[1].tagName",
+											"value": "老乡",
+											"type": "text"
+										},
+										{
+											"key": "tags[2].tagName",
+											"value": "学校",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/addressee/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"addressee",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "Yr8Cd8PCaRg=",
+											"type": "text"
+										},
+										{
+											"key": "province",
+											"value": "湖北",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "咸宁",
+											"type": "text"
+										},
+										{
+											"key": "county",
+											"value": "通山县",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "洪港镇车田",
+											"type": "text"
+										},
+										{
+											"key": "receiveUserName",
+											"value": "wanbg",
+											"type": "text"
+										},
+										{
+											"key": "receiveUserPhone",
+											"value": "121212121212",
+											"type": "text"
+										},
+										{
+											"key": "tags[0].tagName",
+											"value": "家",
+											"type": "text"
+										},
+										{
+											"key": "tags[1].tagName",
+											"value": "老乡",
+											"type": "text"
+										},
+										{
+											"key": "tags[2].tagName",
+											"value": "学校",
+											"type": "text"
+										},
+										{
+											"key": "tags[3].tagName",
+											"value": "公司",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/addressee/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"addressee",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "issuedType",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "invoiceType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "invoiceTitle",
+											"value": "优成长",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/addressee/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"addressee",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0abea851-f252-4323-a11f-383471ab6d9c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "1e5d7aa6-08c9-4f3e-b0f2-ed4627d414f2",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "发票信息",
+					"item": [
+						{
+							"name": "\b添加",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "invoiceTitle",
+											"value": "优成长111",
+											"description": "抬头",
+											"type": "text"
+										},
+										{
+											"key": "issuedType",
+											"value": "1",
+											"description": "开具类型",
+											"type": "text"
+										},
+										{
+											"key": "invoiceType",
+											"value": "0",
+											"description": "发票类型",
+											"type": "text"
+										},
+										{
+											"key": "taxNo",
+											"value": "12121212",
+											"description": "税号",
+											"type": "text"
+										},
+										{
+											"key": "bankName",
+											"value": "招商",
+											"description": "\b银行",
+											"type": "text"
+										},
+										{
+											"key": "bankAccount",
+											"value": "121212121212",
+											"description": "银行账号",
+											"type": "text"
+										},
+										{
+											"key": "regAddress",
+											"value": "\b深圳",
+											"description": "注册地址",
+											"type": "text"
+										},
+										{
+											"key": "companyPhone",
+											"value": "110",
+											"description": "公司电话",
+											"type": "text"
+										},
+										{
+											"key": "tags[2].tagName",
+											"value": "学校",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/invoice/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"invoice",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "issuedType",
+											"value": "",
+											"sessionValue": null,
+											"type": "text"
+										},
+										{
+											"key": "invoiceType",
+											"value": "",
+											"sessionValue": null,
+											"type": "text"
+										},
+										{
+											"key": "invoiceTitle",
+											"value": "",
+											"sessionValue": null,
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/invoice/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"invoice",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "invoiceTitle",
+											"value": "杭州优成长",
+											"description": "抬头1",
+											"type": "text"
+										},
+										{
+											"key": "issuedType",
+											"value": "1",
+											"description": "开具类型",
+											"type": "text"
+										},
+										{
+											"key": "invoiceType",
+											"value": "0",
+											"description": "发票类型",
+											"type": "text"
+										},
+										{
+											"key": "taxNo",
+											"value": "12121212",
+											"description": "税号",
+											"type": "text"
+										},
+										{
+											"key": "bankName",
+											"value": "招商",
+											"description": "\b银行",
+											"type": "text"
+										},
+										{
+											"key": "bankAccount",
+											"value": "121212121212",
+											"description": "银行账号",
+											"type": "text"
+										},
+										{
+											"key": "regAddress",
+											"value": "\b深圳",
+											"description": "注册地址",
+											"type": "text"
+										},
+										{
+											"key": "companyPhone",
+											"value": "110",
+											"description": "公司电话",
+											"type": "text"
+										},
+										{
+											"key": "invoiceId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/invoice/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"invoice",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "用户",
+					"item": [
+						{
+							"name": "查询用户",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "18616205697",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "xwbh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加学员",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "studentUserName",
+											"value": "学员1",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "birthday",
+											"value": "2010-12-05",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "12456",
+											"type": "text"
+										},
+										{
+											"key": "relationType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "908762",
+											"sessionValue": "146719",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/student/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"student",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "学员列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "studentUserName",
+											"value": "学员1",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "birthday",
+											"value": "2010-12-05",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "12456",
+											"type": "text"
+										},
+										{
+											"key": "relationType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "908762",
+											"sessionValue": "146719",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/student/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"student",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "订单信息",
+					"item": [
+						{
+							"name": "\b添加订单",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "courseId",
+											"value": "/5QyKrQwSR4=",
+											"type": "text"
+										},
+										{
+											"key": "userStudentId",
+											"value": "h3RYI6CHAws=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "employeId",
+											"value": "qFDbY+CR1uw=",
+											"type": "text"
+										},
+										{
+											"key": "coursePriceId",
+											"value": "8rh0PNwuTU8=",
+											"type": "text"
+										},
+										{
+											"key": "coursePlaceId",
+											"value": "h3RYI6CHAws=",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "110",
+											"description": "不输入用户ID，代表C端用户下单",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "coursePeriodIds",
+											"value": "/5QyKrQwSR4=",
+											"type": "text"
+										},
+										{
+											"key": "coursePeriodIds",
+											"value": "",
+											"sessionValue": null,
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "remark",
+											"value": "用户下单",
+											"sessionValue": "用户下单",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/order/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"order",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询我的订单",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "dealNumber",
+											"value": "186820288418154496",
+											"sessionValue": "186820288418154496",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/order/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"order",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单开发票",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "invoiceId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "orderIds",
+											"value": "55sWNeQ5XJk=",
+											"type": "text"
+										},
+										{
+											"key": "orderIds",
+											"value": "5E7HxsyBPRk=",
+											"sessionValue": "1",
+											"type": "text"
+										},
+										{
+											"key": "addresseeId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/order/invoice",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"order",
+										"invoice"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "签到",
+					"item": [
+						{
+							"name": "签到信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "classId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "orgStudentIds",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "orgStudentIds",
+											"value": "Yr8Cd8PCaRg=",
+											"type": "text"
+										},
+										{
+											"key": "orgStudentIds",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "orgStudentIds",
+											"value": "tmgg",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/class/student/addStudent",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"class",
+										"student",
+										"addStudent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户签到",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "classId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "X8DSri++DtY=",
+											"type": "text"
+										},
+										{
+											"key": "checkinType",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "mainCoachEmployeId",
+											"value": "qFDbY+CR1uw=",
+											"type": "text"
+										},
+										{
+											"key": "courseId",
+											"value": "/5QyKrQwSR4=",
+											"type": "text"
+										},
+										{
+											"key": "CheckinType",
+											"value": "3",
+											"sessionValue": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/class/attend/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"class",
+										"attend",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "API登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "1212",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "kaptcha",
+									"value": "8888",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/apiLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"apiLogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "org",
+			"item": [
+				{
+					"name": "登录注册",
+					"item": [
+						{
+							"name": "api-验证",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcmciLCJhdXRob3JpdGllcyI6WyJST0xFX09SRyJdLCJpYXQiOjE1MzIxNzgxNTgsImV4cCI6MTUzMjI2NDU1OH0.Et-DFUEjw78sFlhD_dLE8wvQ0bRIrM2MmAtlnjDEnGA"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/hello",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hello"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api-接口权限验证",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxODYxNjIwNTY5OCIsImF1dGhvcml0aWVzIjpbIlJPTEVfT1JHIl0sImlhdCI6MTUzMjM1MDUzMiwiZXhwIjoxNTMyNDM2OTMyfQ.-XI09H-TsUWUUiiN-JGGfP7jCcoM2MARmlwlr6H_1-w"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/org",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"org"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "机构注册",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgName",
+											"value": "机构版本测试",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "274130",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/orgRegister",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"orgRegister"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "机构注册",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orgName",
+													"value": "优成长",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "\b123",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "827620",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/user/orgRegister",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"orgRegister"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1593",
+											"name": "Content-Length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jul 2018 15:23:27 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (CST)",
+											"httpOnly": true,
+											"domain": "localhost",
+											"path": "/",
+											"secure": false,
+											"value": "C0AD21650D84447BB77D48D4214A759E",
+											"key": "JSESSIONID"
+										}
+									],
+									"body": "{\n\t\"accountNonExpired\":true,\n\t\"accountNonLocked\":true,\n\t\"authorities\":[{\n\t\t\"authority\":\"ROLE_ORG\"\n\t}],\n\t\"credentialsNonExpired\":true,\n\t\"enabled\":true,\n\t\"loginType\":\"ORG_ROLE\",\n\t\"org\":{\n\t\t\"createTime\":1532186606701,\n\t\t\"id\":\"vXFV0aL0JZM=\",\n\t\t\"orgId\":7,\n\t\t\"orgName\":\"优成长\",\n\t\t\"state\":\"ENABLED\",\n\t\t\"userId\":47,\n\t\t\"userPhone\":\"18616205698\"\n\t},\n\t\"orgEmployee\":{\n\t\t\"createTime\":1532186606722,\n\t\t\"employeId\":7,\n\t\t\"id\":\"vXFV0aL0JZM=\",\n\t\t\"orgId\":7,\n\t\t\"orgName\":\"优成长\",\n\t\t\"phone\":\"18616205698\",\n\t\t\"state\":\"ENABLED\",\n\t\t\"userId\":47\n\t},\n\t\"password\":\"$2a$10$pAoKs2Ll6MJugc/82/f4M.RkVfDyEtWw8Kv6R84yxeoeyM51tEM4a\",\n\t\"user\":{\n\t\t\"createTime\":1532186606701,\n\t\t\"id\":\"JxtExqHIxis=\",\n\t\t\"loginName\":\"18616205698\",\n\t\t\"loginPassword\":\"$2a$10$pAoKs2Ll6MJugc/82/f4M.RkVfDyEtWw8Kv6R84yxeoeyM51tEM4a\",\n\t\t\"permissions\":[\n\t\t\t{\n\t\t\t\t\"createTime\":1532186607064,\n\t\t\t\t\"id\":\"cFgLypgR0oQ=\",\n\t\t\t\t\"isShow\":\"SHOW\",\n\t\t\t\t\"lastUpdateTime\":\"2018-07-20 22:30:25\",\n\t\t\t\t\"name\":\"org\",\n\t\t\t\t\"opId\":4,\n\t\t\t\t\"orgId\":7,\n\t\t\t\t\"orgName\":\"优成长\",\n\t\t\t\t\"permissionId\":2,\n\t\t\t\t\"rank\":1,\n\t\t\t\t\"state\":\"ENABLED\",\n\t\t\t\t\"type\":\"MENU\",\n\t\t\t\t\"value\":\"/api/org\"\n\t\t\t}\n\t\t],\n\t\t\"phone\":\"18616205698\",\n\t\t\"roles\":[\n\t\t\t{\n\t\t\t\t\"addEmployId\":7,\n\t\t\t\t\"createTime\":1532186607029,\n\t\t\t\t\"id\":\"qIwo4C/GSts=\",\n\t\t\t\t\"lastUpdateTime\":\"2018-07-21 23:19:02\",\n\t\t\t\t\"orgId\":7,\n\t\t\t\t\"orgName\":\"优成长\",\n\t\t\t\t\"roleCode\":\"ROLE_ORG\",\n\t\t\t\t\"roleDesc\":\"org\",\n\t\t\t\t\"roleId\":2,\n\t\t\t\t\"roleName\":\"org\",\n\t\t\t\t\"state\":\"ENABLED\"\n\t\t\t}\n\t\t],\n\t\t\"servicePermissions\":[],\n\t\t\"state\":\"ENABLED\",\n\t\t\"uriPermissions\":[\n\t\t\t{\"$ref\":\"$.user.permissions[0]\"}\n\t\t],\n\t\t\"userId\":47\n\t},\n\t\"username\":\"18616205698\"\n}"
+								},
+								{
+									"name": "机构注册",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orgName",
+													"value": "优成长",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "\b123",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "{\n    \"resultCode\": 11,\n    \"message\": \"手机验证码错误或已过期！\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/user/orgRegister",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"orgRegister"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jul 2018 15:16:10 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (CST)",
+											"httpOnly": true,
+											"domain": "localhost",
+											"path": "/",
+											"secure": false,
+											"value": "C0AD21650D84447BB77D48D4214A759E",
+											"key": "JSESSIONID"
+										}
+									],
+									"body": "{\"resultCode\":11,\"message\":\"手机验证码错误或已过期！\"}"
+								}
+							]
+						},
+						{
+							"name": "机构用户注册",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "orgId",
+											"value": "G7aJJ3A20es=",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "18616205696",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "143377",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/orgUserRegister",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"orgUserRegister"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "机构注册",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orgName",
+													"value": "优成长",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "\b123",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "{\n    \"resultCode\": 11,\n    \"message\": \"手机验证码错误或已过期！\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/user/orgRegister",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"orgRegister"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jul 2018 15:16:10 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (CST)",
+											"httpOnly": true,
+											"domain": "localhost",
+											"path": "/",
+											"secure": false,
+											"value": "C0AD21650D84447BB77D48D4214A759E",
+											"key": "JSESSIONID"
+										}
+									],
+									"body": "{\"resultCode\":11,\"message\":\"手机验证码错误或已过期！\"}"
+								},
+								{
+									"name": "机构注册",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"disabled": false
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orgName",
+													"value": "优成长",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "\b123",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "827620",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/user/orgRegister",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"orgRegister"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1593",
+											"name": "Content-Length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jul 2018 15:23:27 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Tue Jan 19 2038 11:14:07 GMT+0800 (CST)",
+											"httpOnly": true,
+											"domain": "localhost",
+											"path": "/",
+											"secure": false,
+											"value": "C0AD21650D84447BB77D48D4214A759E",
+											"key": "JSESSIONID"
+										}
+									],
+									"body": "{\n\t\"accountNonExpired\":true,\n\t\"accountNonLocked\":true,\n\t\"authorities\":[{\n\t\t\"authority\":\"ROLE_ORG\"\n\t}],\n\t\"credentialsNonExpired\":true,\n\t\"enabled\":true,\n\t\"loginType\":\"ORG_ROLE\",\n\t\"org\":{\n\t\t\"createTime\":1532186606701,\n\t\t\"id\":\"vXFV0aL0JZM=\",\n\t\t\"orgId\":7,\n\t\t\"orgName\":\"优成长\",\n\t\t\"state\":\"ENABLED\",\n\t\t\"userId\":47,\n\t\t\"userPhone\":\"18616205698\"\n\t},\n\t\"orgEmployee\":{\n\t\t\"createTime\":1532186606722,\n\t\t\"employeId\":7,\n\t\t\"id\":\"vXFV0aL0JZM=\",\n\t\t\"orgId\":7,\n\t\t\"orgName\":\"优成长\",\n\t\t\"phone\":\"18616205698\",\n\t\t\"state\":\"ENABLED\",\n\t\t\"userId\":47\n\t},\n\t\"password\":\"$2a$10$pAoKs2Ll6MJugc/82/f4M.RkVfDyEtWw8Kv6R84yxeoeyM51tEM4a\",\n\t\"user\":{\n\t\t\"createTime\":1532186606701,\n\t\t\"id\":\"JxtExqHIxis=\",\n\t\t\"loginName\":\"18616205698\",\n\t\t\"loginPassword\":\"$2a$10$pAoKs2Ll6MJugc/82/f4M.RkVfDyEtWw8Kv6R84yxeoeyM51tEM4a\",\n\t\t\"permissions\":[\n\t\t\t{\n\t\t\t\t\"createTime\":1532186607064,\n\t\t\t\t\"id\":\"cFgLypgR0oQ=\",\n\t\t\t\t\"isShow\":\"SHOW\",\n\t\t\t\t\"lastUpdateTime\":\"2018-07-20 22:30:25\",\n\t\t\t\t\"name\":\"org\",\n\t\t\t\t\"opId\":4,\n\t\t\t\t\"orgId\":7,\n\t\t\t\t\"orgName\":\"优成长\",\n\t\t\t\t\"permissionId\":2,\n\t\t\t\t\"rank\":1,\n\t\t\t\t\"state\":\"ENABLED\",\n\t\t\t\t\"type\":\"MENU\",\n\t\t\t\t\"value\":\"/api/org\"\n\t\t\t}\n\t\t],\n\t\t\"phone\":\"18616205698\",\n\t\t\"roles\":[\n\t\t\t{\n\t\t\t\t\"addEmployId\":7,\n\t\t\t\t\"createTime\":1532186607029,\n\t\t\t\t\"id\":\"qIwo4C/GSts=\",\n\t\t\t\t\"lastUpdateTime\":\"2018-07-21 23:19:02\",\n\t\t\t\t\"orgId\":7,\n\t\t\t\t\"orgName\":\"优成长\",\n\t\t\t\t\"roleCode\":\"ROLE_ORG\",\n\t\t\t\t\"roleDesc\":\"org\",\n\t\t\t\t\"roleId\":2,\n\t\t\t\t\"roleName\":\"org\",\n\t\t\t\t\"state\":\"ENABLED\"\n\t\t\t}\n\t\t],\n\t\t\"servicePermissions\":[],\n\t\t\"state\":\"ENABLED\",\n\t\t\"uriPermissions\":[\n\t\t\t{\"$ref\":\"$.user.permissions[0]\"}\n\t\t],\n\t\t\"userId\":47\n\t},\n\t\"username\":\"18616205698\"\n}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "权限",
+					"item": [
+						{
+							"name": "查询所有的机构权限",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userIds",
+											"value": "SzyZs0t6rTA=",
+											"type": "text"
+										},
+										{
+											"key": "userIds",
+											"value": "l2V5R0d1aO4=",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/permission/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"permission",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有的机构角色",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userIds",
+											"value": "SzyZs0t6rTA=",
+											"type": "text"
+										},
+										{
+											"key": "userIds",
+											"value": "l2V5R0d1aO4=",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/role/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"role",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "给机构用户添加角色，给机构添加对应的权限",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "roleIds",
+											"value": "Lgr6EPDDbjA=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "roleIds",
+											"value": "X1CD9uXFr/o=",
+											"type": "text"
+										},
+										{
+											"key": "employeId",
+											"value": "qFDbY+CR1uw=",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "bqgQ4Li6MwU=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/role/addOrgEmployeeRole",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"role",
+										"addOrgEmployeeRole"
+									]
+								},
+								"description": "添加角色，会将原先的角色拿出来对比，如果不在新增的，删除老的角色，和权限"
+							},
+							"response": []
+						},
+						{
+							"name": "添加自定义角色",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "roleName",
+											"value": "教练角色",
+											"type": "text"
+										},
+										{
+											"key": "roleCode",
+											"value": "教练",
+											"type": "text"
+										},
+										{
+											"key": "roleDesc",
+											"value": "机构自定义角色",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "userId",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/role/addOrgRole",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"role",
+										"addOrgRole"
+									]
+								},
+								"description": "添加角色"
+							},
+							"response": []
+						},
+						{
+							"name": "给机构角色分配权限权限",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "roleId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "opIds",
+											"value": "QrHf4BAW988=",
+											"type": "text"
+										},
+										{
+											"key": "opIds",
+											"value": "kPTy2lzDmRo=",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "userId",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/role/permission/addRoleOrgPermissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"role",
+										"permission",
+										"addRoleOrgPermissions"
+									]
+								},
+								"description": "添加角色，会将原先的角色拿出来对比，如果不在新增的，删除老的角色，和权限"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "员工",
+					"item": [
+						{
+							"name": "查询员工用户",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询员工技能信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/skill/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"skill",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "\b员工工作日信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/workday/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"workday",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "\b员工工作日工作明细信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/worktime/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"worktime",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "\b员工\b附件资源信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/resource/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"resource",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "回访",
+					"item": [
+						{
+							"name": "添加回访",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "baMmorz3sF8=",
+											"type": "text"
+										},
+										{
+											"key": "userName",
+											"value": "18616205696",
+											"type": "text"
+										},
+										{
+											"key": "visitTime",
+											"value": "2018-05-01 18:30:30",
+											"type": "text"
+										},
+										{
+											"key": "visitType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "userPhone",
+											"value": "18616205696",
+											"sessionValue": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "visitContent",
+											"value": "回访",
+											"sessionValue": "回访",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/visit/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"visit",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "回访列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "18616205697",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "xwbh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080//org/visit/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"",
+										"org",
+										"visit",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改回访",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "baMmorz3sF8=",
+											"type": "text"
+										},
+										{
+											"key": "userName",
+											"value": "18616205696",
+											"type": "text"
+										},
+										{
+											"key": "visitTime",
+											"value": "2018-05-01 18:30:30",
+											"type": "text"
+										},
+										{
+											"key": "visitType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "userPhone",
+											"value": "18616205696",
+											"sessionValue": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "visitContent",
+											"value": "回访结束",
+											"sessionValue": "回访",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "Yr8Cd8PCaRg=",
+											"sessionValue": "Yr8Cd8PCaRg=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/visit/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"visit",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "机构管理",
+					"item": [
+						{
+							"name": "机构信息",
+							"item": [
+								{
+									"name": "机构信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "DoY/7c/cEUM=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "添加子机构",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "orgName",
+													"value": "手动添加子机构",
+													"type": "text"
+												},
+												{
+													"key": "userName",
+													"value": "12123",
+													"type": "text"
+												},
+												{
+													"key": "userPhone",
+													"value": "12123",
+													"type": "text"
+												},
+												{
+													"key": "gander",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "iconFile",
+													"sessionValue": {
+														"0": {}
+													},
+													"type": "file"
+												},
+												{
+													"key": "resourceFiles",
+													"sessionValue": {
+														"0": {}
+													},
+													"type": "file"
+												},
+												{
+													"key": "resourceFiles",
+													"sessionValue": {
+														"0": {}
+													},
+													"type": "file"
+												},
+												{
+													"key": "resourceFiles",
+													"sessionValue": {
+														"0": {}
+													},
+													"type": "file"
+												},
+												{
+													"key": "remark",
+													"value": "dddff",
+													"sessionValue": "dd",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "DoY/7c/cEUM=",
+													"sessionValue": "JFnuERzf1tk=",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "196505",
+													"sessionValue": "884626",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/add",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"add"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "教练信息",
+							"item": [
+								{
+									"name": "教练信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/employee/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"employee",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "添加教练",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "userName",
+													"value": "篮球教练",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "DoY/7c/cEUM=",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "110",
+													"type": "text"
+												},
+												{
+													"key": "iconFile",
+													"sessionValue": {
+														"0": {}
+													},
+													"type": "file"
+												},
+												{
+													"key": "birthday",
+													"value": "2000-12-12",
+													"sessionValue": "2000-12-12",
+													"type": "text"
+												},
+												{
+													"key": "eduBackground",
+													"value": "1",
+													"sessionValue": "1",
+													"type": "text"
+												},
+												{
+													"key": "workStartDate",
+													"value": "2017-12-12",
+													"sessionValue": "2017-12-12",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeRecordModels[0].recordName",
+													"value": "游泳教练",
+													"sessionValue": "recordName",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeRecordModels[0].beginDate",
+													"value": "2017-12-12",
+													"sessionValue": "2017-12-12",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeRecordModels[0].endDate",
+													"value": "2018-12-12",
+													"sessionValue": "recordName",
+													"type": "text"
+												},
+												{
+													"key": "secondCategoryIds",
+													"value": "h3RYI6CHAws=",
+													"sessionValue": "4",
+													"type": "text"
+												},
+												{
+													"key": "secondCategoryIds",
+													"value": "8rh0PNwuTU8=",
+													"sessionValue": "5",
+													"type": "text"
+												},
+												{
+													"key": "remark",
+													"value": "dddd",
+													"sessionValue": "dd",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeWorktimes[0].secondCategoryId",
+													"value": "4",
+													"sessionValue": "4",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeWorktimes[0].dayType",
+													"value": "4",
+													"sessionValue": "4",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeWorktimes[0].beginTime",
+													"value": "13:00",
+													"sessionValue": "09:00",
+													"type": "text"
+												},
+												{
+													"key": "orgEmployeeWorktimes[0].endTime",
+													"value": "14:00",
+													"sessionValue": "10:00",
+													"type": "text"
+												},
+												{
+													"key": "jobType",
+													"value": "1",
+													"sessionValue": "1",
+													"type": "text"
+												},
+												{
+													"key": "phoneCode",
+													"value": "618812",
+													"sessionValue": "VrsJ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/employee/addCoach",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"employee",
+												"addCoach"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "课程信息",
+							"item": [
+								{
+									"name": "添加课程",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "orgId",
+													"value": "DoY/7c/cEUM=",
+													"type": "text"
+												},
+												{
+													"key": "remark",
+													"value": "4",
+													"sessionValue": "4",
+													"type": "text"
+												},
+												{
+													"key": "startUserNum",
+													"value": "10",
+													"sessionValue": "10",
+													"type": "text"
+												},
+												{
+													"key": "isSettingTime",
+													"value": "0",
+													"sessionValue": "0",
+													"type": "text"
+												},
+												{
+													"key": "courseName",
+													"value": "篮球",
+													"sessionValue": "篮球",
+													"description": "课程名称",
+													"type": "text"
+												},
+												{
+													"key": "classTypeName",
+													"value": "小班（10人）",
+													"sessionValue": "小班（10）",
+													"description": "版种名称",
+													"type": "text"
+												},
+												{
+													"key": "courseType",
+													"value": "1",
+													"sessionValue": "courseType",
+													"type": "text"
+												},
+												{
+													"key": "cctId",
+													"value": "bnoZZjyvnxY=",
+													"sessionValue": "cctId",
+													"type": "text"
+												},
+												{
+													"key": "secondCategoryId",
+													"value": "8rh0PNwuTU8=",
+													"sessionValue": "8rh0PNwuTU8=",
+													"type": "text"
+												},
+												{
+													"key": "startType",
+													"value": "0",
+													"sessionValue": "0",
+													"type": "text"
+												},
+												{
+													"key": "placeIds",
+													"value": "bnoZZjyvnxY=",
+													"sessionValue": "bnoZZjyvnxY=",
+													"type": "text"
+												},
+												{
+													"key": "resourceFiles",
+													"sessionValue": {
+														"0": {}
+													},
+													"type": "file"
+												},
+												{
+													"key": "resourceFiles",
+													"value": "",
+													"sessionValue": null,
+													"type": "file"
+												},
+												{
+													"key": "periodModels[0].dayType",
+													"value": "0",
+													"sessionValue": "0",
+													"type": "text"
+												},
+												{
+													"key": "periodModels[0].beginTime",
+													"value": "08:00",
+													"sessionValue": "9:10",
+													"type": "text"
+												},
+												{
+													"key": "periodModels[0].endTime",
+													"value": "09:00",
+													"sessionValue": "11:10",
+													"type": "text"
+												},
+												{
+													"key": "periodModels[1].dayType",
+													"value": "1",
+													"sessionValue": "bnoZZjyvnxY=",
+													"type": "text"
+												},
+												{
+													"key": "periodModels[1].beginTime",
+													"value": "9:30",
+													"sessionValue": "9:30",
+													"type": "text"
+												},
+												{
+													"key": "periodModels[1].endTime",
+													"value": "10:30",
+													"sessionValue": "10:30",
+													"type": "text"
+												},
+												{
+													"key": "priceModels[0].classCount",
+													"value": "12",
+													"sessionValue": "12",
+													"type": "text"
+												},
+												{
+													"key": "priceModels[0].classTime",
+													"value": "12",
+													"sessionValue": "12",
+													"type": "text"
+												},
+												{
+													"key": "priceModels[0].price",
+													"value": "100",
+													"sessionValue": "100",
+													"type": "text"
+												},
+												{
+													"key": "priceModels[0].totalClassTime",
+													"value": "112",
+													"sessionValue": "112",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/add",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "课程信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班种信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/class/type/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"class",
+												"type",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "\b课程上课周期信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/period/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"period",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "\b课程上课地点信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/place/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"place",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "\b课程资源信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/resource/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"resource",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "\b课程价格信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/course/price/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"course",
+												"price",
+												"list"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "学员信息",
+							"item": [
+								{
+									"name": "学员信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/student/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"student",
+												"list"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "班级信息",
+							"item": [
+								{
+									"name": "班级信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级学员信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/student/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"student",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级教练信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/coach/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"coach",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级添加学员",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "classId",
+													"value": "bnoZZjyvnxY=",
+													"type": "text"
+												},
+												{
+													"key": "orgStudentIds",
+													"value": "123",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "orgStudentIds",
+													"value": "Yr8Cd8PCaRg=",
+													"type": "text"
+												},
+												{
+													"key": "orgStudentIds",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "orgStudentIds",
+													"value": "tmgg",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/student/addStudent",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"student",
+												"addStudent"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级删除学员",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "ids",
+													"value": "Yr8Cd8PCaRg=",
+													"type": "text"
+												},
+												{
+													"key": "ids",
+													"value": "123",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ids",
+													"value": "0lEXebN/gZ8=",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ids",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ids",
+													"value": "tmgg",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/student/delete",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"student",
+												"delete"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级更换主教练",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "classId",
+													"value": "bnoZZjyvnxY=",
+													"type": "text"
+												},
+												{
+													"key": "mainCoachEmplpoyId",
+													"value": "qFDbY+CR1uw=",
+													"description": "主教练ID",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/changeMainCoach",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"changeMainCoach"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级\b添加教练",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "employeIds",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "employeIds",
+													"value": "DTtuuU3JAyo=",
+													"type": "text"
+												},
+												{
+													"key": "classId",
+													"value": "bnoZZjyvnxY=",
+													"sessionValue": "bnoZZjyvnxY=",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/coach/addOrgCoach",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"coach",
+												"addOrgCoach"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "班级\b删除教练",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "ids",
+													"value": "Yr8Cd8PCaRg=",
+													"type": "text"
+												},
+												{
+													"key": "ids",
+													"value": "123",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ids",
+													"value": "0lEXebN/gZ8=",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/class/coach/delete",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"class",
+												"coach",
+												"delete"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "场地信息",
+							"item": [
+								{
+									"name": "场地信息",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/place/list",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"place",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "添加场地",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "18616205698",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "orgId",
+													"value": "0lEXebN/gZ8=",
+													"type": "text"
+												},
+												{
+													"key": "loginType",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kaptcha",
+													"value": "tmgg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/org/place/add",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"org",
+												"place",
+												"add"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "订单",
+					"item": [
+						{
+							"name": "订单列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/order/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"order",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单明细列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/order/course/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"order",
+										"course",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单教练信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/order/course/coach/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"order",
+										"course",
+										"coach",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单上课时间信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/order/course/coach/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"order",
+										"course",
+										"coach",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "排课",
+					"item": [
+						{
+							"name": "排课信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/class/arrange/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"class",
+										"arrange",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "手动排课",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "className",
+											"value": "篮球课",
+											"type": "text"
+										},
+										{
+											"key": "courseId",
+											"value": "/5QyKrQwSR4=",
+											"type": "text"
+										},
+										{
+											"key": "employeIds",
+											"value": "qFDbY+CR1uw=",
+											"type": "text"
+										},
+										{
+											"key": "employeIds",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "orgStudentIds",
+											"value": "Yr8Cd8PCaRg=",
+											"type": "text"
+										},
+										{
+											"key": "orgStudentIds",
+											"value": "h3RYI6CHAws=",
+											"sessionValue": "h3RYI6CHAws=",
+											"type": "text"
+										},
+										{
+											"key": "endTime",
+											"value": "11:10",
+											"sessionValue": "endTime",
+											"type": "text"
+										},
+										{
+											"key": "beginTime",
+											"value": "09:10",
+											"sessionValue": "beginTime",
+											"type": "text"
+										},
+										{
+											"key": "coursePeriodId",
+											"value": "/5QyKrQwSR4=",
+											"sessionValue": "/5QyKrQwSR4=",
+											"type": "text"
+										},
+										{
+											"key": "coursePlaceId",
+											"value": "h3RYI6CHAws=",
+											"sessionValue": "/5QyKrQwSR4=",
+											"type": "text"
+										},
+										{
+											"key": "gradeType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/class/arrange/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"class",
+										"arrange",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "组织架构",
+					"item": [
+						{
+							"name": "部门信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/department/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"department",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加部门",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "remark",
+											"value": "技术",
+											"type": "text"
+										},
+										{
+											"key": "departmentName",
+											"value": "技术部",
+											"type": "text"
+										},
+										{
+											"key": "parentDepartmentName",
+											"value": "优成长",
+											"type": "text"
+										},
+										{
+											"key": "parentDepartmentId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "employeId",
+											"value": "7SSHLJsw8qc=",
+											"sessionValue": "7SSHLJsw8qc=",
+											"description": "\b部门负责人",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/department/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"department",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "签到",
+					"item": [
+						{
+							"name": "签到信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/checkin/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"checkin",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "员工签到",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "classId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "employeId",
+											"value": "qFDbY+CR1uw=",
+											"type": "text"
+										},
+										{
+											"key": "checkinType",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/checkin/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"checkin",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "个人信息",
+					"item": [
+						{
+							"name": "教练修改资料",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userName",
+											"value": "华卫教练测试",
+											"sessionValue": "华卫",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "18616205698",
+											"sessionValue": "18616205698",
+											"description": "1",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"sessionValue": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "华卫测试",
+											"sessionValue": "华卫测试",
+											"type": "text"
+										},
+										{
+											"key": "iconFile",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "orgResourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "orgResourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "orgResourceFiles",
+											"value": "",
+											"sessionValue": null,
+											"type": "file"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/updateInfo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"updateInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "店主修改资料",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userName",
+											"value": "店主",
+											"sessionValue": "华卫",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "18616205697",
+											"sessionValue": "18616205698",
+											"description": "1",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "1",
+											"sessionValue": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "华卫测试",
+											"sessionValue": "华卫测试",
+											"type": "text"
+										},
+										{
+											"key": "iconFile",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "orgResourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "orgResourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "orgResourceFiles",
+											"value": "",
+											"sessionValue": null,
+											"type": "file"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/updateInfo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"updateInfo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "教练API登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "orgId",
+									"value": "DoY/7c/cEUM=",
+									"type": "text"
+								},
+								{
+									"key": "loginType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "kaptcha",
+									"value": "8888",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "填",
+									"sessionValue": "填",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/apiLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"apiLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "店主API登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "1212",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "orgId",
+									"value": "DoY/7c/cEUM=",
+									"type": "text"
+								},
+								{
+									"key": "loginType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "kaptcha",
+									"value": "8888",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "填",
+									"sessionValue": "填",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/apiLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"apiLogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "platform",
+			"item": [
+				{
+					"name": "权限管理",
+					"item": [
+						{
+							"name": "给机构店主添加角色，给机构添加对应的权限",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "roleIds",
+											"value": "pvUSertWX2s=",
+											"description": "测试版本1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "roleIds",
+											"value": "TUmXdNPfCzY=",
+											"description": "测试版本2",
+											"type": "text"
+										},
+										{
+											"key": "employeId",
+											"value": "kPTy2lzDmRo=",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/role/addPlatformShopkeeperRole",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"role",
+										"addPlatformShopkeeperRole"
+									]
+								},
+								"description": "添加角色，会将原先的角色拿出来对比，如果不在新增的，删除老的角色，和权限"
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有的系统权限",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userIds",
+											"value": "SzyZs0t6rTA=",
+											"type": "text"
+										},
+										{
+											"key": "userIds",
+											"value": "l2V5R0d1aO4=",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "kPTy2lzDmRo=",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/permission/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"permission",
+										"list"
+									]
+								},
+								"description": "添加角色，会将原先的角色拿出来对比，如果不在新增的，删除老的角色，和权限"
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有的角色",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userIds",
+											"value": "SzyZs0t6rTA=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "userIds",
+											"value": "l2V5R0d1aO4=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "kaptcha",
+											"value": "kPTy2lzDmRo=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/role/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"role",
+										"list"
+									]
+								},
+								"description": "添加角色，会将原先的角色拿出来对比，如果不在新增的，删除老的角色，和权限"
+							},
+							"response": []
+						},
+						{
+							"name": "给平台角添加权限",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "roleId",
+											"value": "o1HDiREIa6U=",
+											"description": "平台角色",
+											"type": "text"
+										},
+										{
+											"key": "permissions",
+											"value": "w1S83Bwph4o=",
+											"type": "text"
+										},
+										{
+											"key": "permissions",
+											"value": "cFRozXGjXWk=",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "userId",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/role/permission/addRoleSysPermissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"role",
+										"permission",
+										"addRoleSysPermissions"
+									]
+								},
+								"description": "添加角色，会将原先的角色拿出来对比，如果不在新增的，删除老的角色，和权限"
+							},
+							"response": []
+						},
+						{
+							"name": "添加角色",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "roleName",
+											"value": "平台角色",
+											"type": "text"
+										},
+										{
+											"key": "roleCode",
+											"value": "platform111",
+											"type": "text"
+										},
+										{
+											"key": "roleDesc",
+											"value": "平台角色",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "userId",
+											"value": "hZBwjR56D7Y=",
+											"sessionValue": "hZBwjR56D7Y=",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/role/addPlatformRole",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"role",
+										"addPlatformRole"
+									]
+								},
+								"description": "添加角色"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "用户管理",
+					"item": [
+						{
+							"name": "禁用用户",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userIds",
+											"value": "SzyZs0t6rTA=",
+											"type": "text"
+										},
+										{
+											"key": "userIds",
+											"value": "l2V5R0d1aO4=",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/disable",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"disable"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询平台用户",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205697",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "xwbh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/shopkeeper/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"shopkeeper",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "店主",
+					"item": [
+						{
+							"name": "查询店主",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "18616205697",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "xwbh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/shopkeeper/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"shopkeeper",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询店主子账号",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "orgAccountType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/employee/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"employee",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "学员",
+					"item": [
+						{
+							"name": "查询学员",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "0lEXebN/gZ8=",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/student/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"student",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "平台订单",
+					"item": [
+						{
+							"name": "查询店主购买记录",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "18616205697",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "xwbh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/order/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"order",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "平台订单生成",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "hZBwjR56D7Y=",
+											"type": "text"
+										},
+										{
+											"key": "dealType",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "dealAmount",
+											"value": "121212",
+											"type": "text"
+										},
+										{
+											"key": "payType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "productVersion",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "buyContent",
+											"value": "测试版本",
+											"sessionValue": "测试版本",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "18616206598",
+											"sessionValue": "18616206598",
+											"type": "text"
+										},
+										{
+											"key": "userName",
+											"value": "huawei",
+											"sessionValue": "huawei",
+											"type": "text"
+										},
+										{
+											"key": "dealDate",
+											"value": "2018-08-18",
+											"sessionValue": "2018-08-18",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"sessionValue": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "orgName",
+											"value": "测试版本1",
+											"sessionValue": "测试版本1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/order/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"order",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "平台订单开票",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "invoiceId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "orderIds",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "orderIds",
+											"value": "Yr8Cd8PCaRg=",
+											"sessionValue": "1",
+											"type": "text"
+										},
+										{
+											"key": "addresseeId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/order/invoice",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"order",
+										"invoice"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "机构管理",
+					"item": [
+						{
+							"name": "添加机构",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "orgName",
+											"value": "手动添加机构",
+											"type": "text"
+										},
+										{
+											"key": "userName",
+											"value": "1212",
+											"type": "text"
+										},
+										{
+											"key": "userPhone",
+											"value": "1212",
+											"type": "text"
+										},
+										{
+											"key": "gander",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "iconFile",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "resourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "resourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "resourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "remark",
+											"value": "dddff",
+											"sessionValue": "dd",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "314388",
+											"sessionValue": "428235",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "机构列表",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "orgName",
+											"value": "手动添加机构",
+											"type": "text"
+										},
+										{
+											"key": "userName",
+											"value": "1212",
+											"type": "text"
+										},
+										{
+											"key": "userPhone",
+											"value": "1212",
+											"type": "text"
+										},
+										{
+											"key": "gander",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "iconFile",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "resourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "resourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "resourceFiles",
+											"sessionValue": {
+												"0": {}
+											},
+											"type": "file"
+										},
+										{
+											"key": "remark",
+											"value": "dddff",
+											"sessionValue": "dd",
+											"type": "text"
+										},
+										{
+											"key": "phoneCode",
+											"value": "314388",
+											"sessionValue": "428235",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/org/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"org",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "课程\b科目",
+					"item": [
+						{
+							"name": "科目信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/course/category/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"course",
+										"category",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "\b区域信息",
+					"item": [
+						{
+							"name": "区域信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/area/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"area",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加区域信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "zipCode",
+											"value": "434601",
+											"type": "text"
+										},
+										{
+											"key": "parentAreaId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "parentAreaName",
+											"value": "湖北省",
+											"type": "text"
+										},
+										{
+											"key": "adminDivision",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "areaName",
+											"value": "武汉市",
+											"sessionValue": "武汉市",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/area/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"area",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "消息模块",
+					"item": [
+						{
+							"name": "消息模版信息",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "18616205698",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "0lEXebN/gZ8=",
+											"type": "text"
+										},
+										{
+											"key": "loginType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "kaptcha",
+											"value": "tmgg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/platform/area/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"platform",
+										"area",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加消息模版",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "msgContentTemplate",
+											"value": "【优成长】xxx您在XXX机构的课程xxx快到期了，请尽快完成续费，以便我们更好的为您提供服务。",
+											"type": "text"
+										},
+										{
+											"key": "orgId",
+											"value": "DoY/7c/cEUM=",
+											"type": "text"
+										},
+										{
+											"key": "ruleType",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "ruleName",
+											"value": "到期预警",
+											"type": "text"
+										},
+										{
+											"key": "msgSendChannel",
+											"value": "2",
+											"sessionValue": "武汉市",
+											"type": "text"
+										},
+										{
+											"key": "sendCrontab",
+											"value": "* * * * *",
+											"sessionValue": "* * * * *",
+											"type": "text"
+										},
+										{
+											"key": "employeId",
+											"value": "X8DSri++DtY=",
+											"sessionValue": "X8DSri++DtY=",
+											"type": "text"
+										},
+										{
+											"key": "sendTime",
+											"value": "2018-12-12 02:02:02",
+											"sessionValue": "2018-12-12 02:02:02",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "\b\b优成长到期预警",
+											"sessionValue": "\b\b优成长到期预警",
+											"type": "text"
+										},
+										{
+											"key": "sendType",
+											"value": "0",
+											"sessionValue": "0",
+											"type": "text"
+										},
+										{
+											"key": "messageType",
+											"value": "1",
+											"sessionValue": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/sys/message/rule/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sys",
+										"message",
+										"rule",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "审核消息模版",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ruleId",
+											"value": "bnoZZjyvnxY=",
+											"type": "text"
+										},
+										{
+											"key": "auditState",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/sys/message/rule/auditRule",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sys",
+										"message",
+										"rule",
+										"auditRule"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "API登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJodWF3ZWkiLCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwiaWF0IjoxNTMxNjU1MTkxLCJleHAiOjE1MzE3NDE1OTF9.V_gWRC6oZC25ekEtZi5KryTeJRI0kGFVejbUi6Xlnmk"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "platform",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "orgId",
+									"value": "mqFJc+RxOio=",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "loginType",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "kaptcha",
+									"value": "8888",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/apiLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"apiLogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "验证码",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/kaptcha",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kaptcha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注册发送手机验证码",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "110",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/platform/message/sendMessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"platform",
+						"message",
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

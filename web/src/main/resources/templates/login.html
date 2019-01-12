@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Login page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}" >
+    <link href="/css/bootstrap/signin.css" rel="stylesheet" th:href="@{/css/bootstrap/signin.css}"/>
+    <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}" />
+</head>
+<body>
+<div class="container">
+    <form class="form-signin" th:action="@{/login}" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p>Example: index1 / password</p>
+        <p th:if="${param.error}" class="error">index1</p>
+        <p>
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus/>
+        <!--</p>-->
+        <!--<p >-->
+            <!--<label for="orgId" class="sr-only">orgId</label>-->
+            <!--<input type="hidden" id="orgId" name="orgId" class="form-control" placeholder="orgId" required autofocus/>-->
+        <!--</p>-->
+        <p>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required autofocus/>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br/>
+        <p><a href="/index" th:href="@{/index}">Back to home page</a></p>
+    </form>
+</div>
+</body>
+</html>
