@@ -1,7 +1,6 @@
 package com.alonelaval.cornerstone.service;
 
 import com.alonelaval.common.page.Page;
-import com.alonelaval.cornerstone.service.user.UserService;
 import com.alonelaval.cornerstone.dao.DaoImplApplication;
 import com.alonelaval.cornerstone.dao.repository.jpa.JpaApplication;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepositoryImpl;

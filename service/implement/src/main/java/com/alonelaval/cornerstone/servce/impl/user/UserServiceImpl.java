@@ -2,8 +2,6 @@ package com.alonelaval.cornerstone.servce.impl.user;
 
 import com.alonelaval.common.exception.ServiceException;
 import com.alonelaval.common.page.Page;
-import com.alonelaval.cornerstone.servce.impl.AbstractBaseService;
-import com.alonelaval.cornerstone.servce.impl.config.ServiceConfig;
 import com.alonelaval.cornerstone.dao.inter.IBaseDao;
 import com.alonelaval.cornerstone.dao.inter.user.UserDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.WhereBuilder;

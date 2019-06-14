@@ -1,7 +1,6 @@
 package com.alonelaval.cornerstone.web.controller.user;
 
 import com.alonelaval.common.page.Page;
-import com.alonelaval.cornerstone.web.controller.AbstractController;
 import com.alonelaval.cornerstone.entity.base.JsonResult;
 import com.alonelaval.cornerstone.entity.biz.UserAddressee;
 import com.alonelaval.cornerstone.entity.model.UserAddresseeModel;

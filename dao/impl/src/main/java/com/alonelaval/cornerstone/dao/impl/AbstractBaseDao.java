@@ -5,8 +5,6 @@ import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
 import com.google.common.collect.Lists;
 import com.alonelaval.common.exception.DaoException;
 import com.alonelaval.common.page.Page;
-import com.alonelaval.cornerstone.dao.inter.IBaseDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
 import com.alonelaval.cornerstone.entity.base.IEntity;
 import com.alonelaval.cornerstone.entity.constants.ExceptionType;
 import com.alonelaval.cornerstone.entity.constants.State;

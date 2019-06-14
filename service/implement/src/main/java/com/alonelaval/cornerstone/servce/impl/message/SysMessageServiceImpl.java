@@ -1,6 +1,5 @@
 package com.alonelaval.cornerstone.servce.impl.message;
 
-import com.alonelaval.cornerstone.servce.impl.AbstractBaseService;
 import com.alonelaval.cornerstone.dao.inter.IBaseDao;
 import com.alonelaval.cornerstone.dao.inter.org.SysMessageDao;
 import com.alonelaval.cornerstone.entity.biz.SysMessage;

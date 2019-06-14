@@ -1,8 +1,6 @@
 package com.alonelaval.cornerstone.dao.impl.platform;
 
 import com.alonelaval.common.exception.DaoException;
-import com.alonelaval.cornerstone.dao.inter.platform.RolePermissionDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.biz.RolePermissionRepository;
 import com.alonelaval.cornerstone.dao.impl.AbstractBaseDao;
 import com.alonelaval.cornerstone.dao.inter.platform.RolePermissionDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;

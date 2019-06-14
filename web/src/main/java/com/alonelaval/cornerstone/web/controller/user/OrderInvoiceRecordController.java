@@ -1,7 +1,6 @@
 package com.alonelaval.cornerstone.web.controller.user;
 
 import com.alonelaval.common.page.Page;
-import com.alonelaval.cornerstone.web.controller.AbstractController;
 import com.alonelaval.cornerstone.entity.biz.OrderInvoiceRecord;
 import com.alonelaval.cornerstone.entity.model.OrderInvoiceRecordModel;
 import com.alonelaval.cornerstone.service.IBaseService;

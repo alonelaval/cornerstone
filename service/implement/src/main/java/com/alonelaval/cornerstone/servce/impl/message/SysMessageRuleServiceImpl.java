@@ -2,7 +2,6 @@ package com.alonelaval.cornerstone.servce.impl.message;
 
 import com.alonelaval.common.context.UserContextHolder;
 import com.alonelaval.common.exception.ExceptionUtil;
-import com.alonelaval.cornerstone.servce.impl.AbstractBaseService;
 import com.alonelaval.cornerstone.dao.inter.IBaseDao;
 import com.alonelaval.cornerstone.dao.inter.org.SysMessageRuleDao;
 import com.alonelaval.cornerstone.entity.base.UserAdapter;

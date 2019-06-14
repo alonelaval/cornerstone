@@ -1,8 +1,5 @@
 package com.alonelaval.cornerstone.dao.impl.org.message;
 
-import com.alonelaval.cornerstone.dao.inter.org.SysMessageDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
-import com.alonelaval.cornerstone.dao.repository.jpa.biz.SysMessageRepository;
 import com.alonelaval.cornerstone.dao.impl.AbstractBaseDao;
 import com.alonelaval.cornerstone.dao.inter.org.SysMessageDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;

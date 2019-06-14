@@ -1,9 +1,6 @@
 package com.alonelaval.cornerstone.dao.impl.user;
 
 import com.alonelaval.common.exception.DaoException;
-import com.alonelaval.cornerstone.dao.inter.user.UserDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
-import com.alonelaval.cornerstone.dao.repository.jpa.biz.UserRepository;
 import com.alonelaval.cornerstone.dao.impl.AbstractBaseDao;
 import com.alonelaval.cornerstone.dao.inter.user.UserDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;

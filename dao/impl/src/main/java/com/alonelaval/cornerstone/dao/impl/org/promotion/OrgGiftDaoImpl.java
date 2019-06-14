@@ -1,8 +1,5 @@
 package com.alonelaval.cornerstone.dao.impl.org.promotion;
 
-import com.alonelaval.cornerstone.dao.inter.org.OrgGiftDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
-import com.alonelaval.cornerstone.dao.repository.jpa.biz.OrgGiftRepository;
 import com.alonelaval.cornerstone.dao.impl.AbstractBaseDao;
 import com.alonelaval.cornerstone.dao.inter.org.OrgGiftDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;

@@ -49,6 +49,8 @@ public class OrderInvoiceRecord extends AbstractEntity {
     private OrderType orderType;
 
 
+
+
     @Override
     protected String getEntityId() {
         return this.oirId.toString();

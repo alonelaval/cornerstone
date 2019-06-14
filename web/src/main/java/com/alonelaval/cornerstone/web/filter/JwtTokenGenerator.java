@@ -1,6 +1,5 @@
 package com.alonelaval.cornerstone.web.filter;
 
-import com.alonelaval.cornerstone.web.config.ApplicationConfig;
 import com.alonelaval.cornerstone.entity.base.UserAdapter;
 import com.alonelaval.cornerstone.web.config.ApplicationConfig;
 import io.jsonwebtoken.Jwts;

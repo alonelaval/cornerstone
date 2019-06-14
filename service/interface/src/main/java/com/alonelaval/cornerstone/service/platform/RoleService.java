@@ -1,6 +1,5 @@
 package com.alonelaval.cornerstone.service.platform;
 
-import com.alonelaval.cornerstone.service.IBaseService;
 import com.alonelaval.cornerstone.entity.biz.Org;
 import com.alonelaval.cornerstone.entity.biz.OrgEmployee;
 import com.alonelaval.cornerstone.entity.biz.Role;

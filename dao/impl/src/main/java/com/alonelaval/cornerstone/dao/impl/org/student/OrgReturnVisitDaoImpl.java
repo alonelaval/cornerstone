@@ -1,8 +1,5 @@
 package com.alonelaval.cornerstone.dao.impl.org.student;
 
-import com.alonelaval.cornerstone.dao.inter.org.OrgReturnVisitDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
-import com.alonelaval.cornerstone.dao.repository.jpa.biz.OrgReturnVisitRepository;
 import com.alonelaval.cornerstone.dao.impl.AbstractBaseDao;
 import com.alonelaval.cornerstone.dao.inter.org.OrgReturnVisitDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;

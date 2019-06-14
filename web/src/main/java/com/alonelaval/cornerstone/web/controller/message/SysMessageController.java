@@ -1,7 +1,6 @@
 package com.alonelaval.cornerstone.web.controller.message;
 
 import com.alonelaval.common.page.Page;
-import com.alonelaval.cornerstone.web.controller.AbstractController;
 import com.alonelaval.cornerstone.entity.biz.SysMessage;
 import com.alonelaval.cornerstone.entity.model.SysMessageModel;
 import com.alonelaval.cornerstone.service.IBaseService;

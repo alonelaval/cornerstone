@@ -1,8 +1,5 @@
 package com.alonelaval.cornerstone.dao.impl.org.order;
 
-import com.alonelaval.cornerstone.dao.inter.org.OrgOrderCourseCoachDao;
-import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
-import com.alonelaval.cornerstone.dao.repository.jpa.biz.OrgOrderCourseCoachRepository;
 import com.alonelaval.cornerstone.dao.impl.AbstractBaseDao;
 import com.alonelaval.cornerstone.dao.inter.org.OrgOrderCourseCoachDao;
 import com.alonelaval.cornerstone.dao.repository.jpa.base.BaseRepository;
